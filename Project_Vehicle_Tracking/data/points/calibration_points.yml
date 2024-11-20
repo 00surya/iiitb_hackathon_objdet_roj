@@ -1,0 +1,13 @@
+real_world_points:
+  - [0, 0] # Top-left corner in real-world coordinates
+  - [70, 0] # Top-right corner in real-world coordinates 
+  - [70, 5] # Bottom-right corner in real-world coordinates
+  - [0, 5] # Bottom-left corner in real-world coordinates
+  
+image_points:
+  - [56, 286] # Top-left corner in image frame
+  - [280, 284] # Top-right corner in image frame
+  - [315, 382] # Bottom-right corner in image frame
+  - [22, 386] # Bottom-left corner in image frame
+
+
