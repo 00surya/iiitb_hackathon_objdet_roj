@@ -3,7 +3,9 @@
 
 ## Project Overview
 
-This project aims to track and analyze vehicles in high-speed highway videos. By leveraging the **YOLOv8** model for vehicle detection and a **Kalman filter** for vehicle tracking, we achieve precise tracking and behavior analysis. The primary goal is to assign unique IDs to vehicles, predict their future positions using the Kalman filter, and analyze their behavior based on their path, speed, and erratic movements.
+The primary goal of this project is to track and analyze vehicles in high-speed highway videos to identify erratic behavior before it escalates. By leveraging the YOLOv8 model for vehicle detection and a Kalman filter for vehicle tracking, the system aims to assign unique IDs to vehicles, predict their future positions, and analyze their behavior based on their path, speed, and erratic movements. This has the potential to improve traffic safety by detecting dangerous driving patterns early, ultimately preventing accidents and helping to improve highway traffic management.
+
+In this project, we assume that the vehicles are moving on a high-speed highway, and the camera is set up in such a way that it captures a slight aerial view of the road. Based on these assumptions, we have worked on real-world parameters to track vehicle movement and predict their behavior. However, since we are not fully certain of the exact vehicle speeds, we are not considering speed as a direct factor in detecting erratic driving at this stage. The analysis currently focuses on vehicle path and behavior, under the assumption that the vehicles are already traveling at high speeds on the highway.
 
 ![Demo Gif](sprites/tracking.gif)
 
@@ -147,10 +149,78 @@ The overall flow of the scripts is as follows:
 
 ## Setup Instructions
 
-Now, let's set up the environment and run the project.
+### Prerequisites
 
-1. **Clone the repository**:
+Make sure you have the following:
 
-   ```bash
-   git clone https://github.com/your-repository/vehicle-tracking-system.git
-   cd vehicle-tracking-system
+- **Python 3.7+** installed.
+- **Conda** installed for managing virtual environments.
+
+### Clone the repository
+
+First, clone the repository to your local machine:
+
+```bash
+git clone https://your-repository-url.git
+cd your-repository-folder
+```
+
+The project provides a setup.sh script to set up the Conda environment and install all necessary dependencies. This script will also download the required YOLOv8 model.
+
+Run the following command to start the setup process:
+```.\setup.sh```
+
+After the setup script completes, activate the Conda environment:
+```conda activate hackathon_env```
+
+## Configuration
+
+### Input Files
+- Video Input: The input video file to be processed. By default, it looks for sprites/v1.mp4.
+- Model File: The trained model file in PyTorch format (.pt). Default is models/m1/weights/best.pt.
+- Calibration Points: YAML file containing the calibration points used for perspective transformation. Default is data/points/calibration_points.yml.
+
+Make sure you have these files in the correct paths or specify your own.
+
+### Usage
+You can run the vehicle tracking with the following command:
+
+```python main.py --video_path path/to/your/input_video.mp4 --output_path path/to/save/output_video.mp4 --device cpu --model_path path/to/your/model.pt --calibration_points path/to/calibration_points.yml```
+
+### Arguments:
+
+- --video_path (str): Path to the input video file. (Default: 'sprites/v1.mp4')
+- --output_path (str): Path where the output video will be saved.
+- --device (str): The device to run the model on. Options are 'cpu' or 'gpu'. (Default: 'cpu')
+- --model_path (str): Path to the trained model file. (Default: 'models/m1/weights/best.pt')
+- --calibration_points (str): Path to the YAML file containing calibration points for perspective correction. (Default: 'data/points/calibration_points.yml')
+  
+### Examples:
+```python main.py --video_path sprites/v1.mp4 --output_path output/video_result.mp4 --device cpu --model_path models/m1/weights/best.pt --calibration_points data/points/calibration_points.yml```
+
+This will process the video **v1.mp4** using the model at **best.pt** and save the output to output/video_result.mp4.
+
+
+## Troubleshooting
+
+- If you're running on a GPU, ensure that the correct version of PyTorch with GPU support is installed.
+- If you're using custom paths for the model or calibration points, ensure that the file paths are correct.
+
+
+## Demo Video
+
+Here is a demo video of the vehicle tracking system in action:
+
+[![Video Thumbnail](https://img.youtube.com/vi/32nXzBIQE9U/0.jpg)](https://youtu.be/32nXzBIQE9U)
+
+
+
+## Disclaimer
+
+We apologize for the incomplete documentation at the moment. There are many opportunities to improve both our implementation and the documentation, and while we have not yet reached the best possible version, we have made significant progress. Our goal is to refine and complete the project with the highest quality possible.
+
+We have worked hard to implement key features and have touched on important aspects of vehicle tracking, including model inference, calibration, and video processing. While some parts are still in progress, we are actively working to finalize everything with the aim of achieving a fully functional and well-documented solution.
+
+We believe our approach has great potential, and we're committed to completing it. Your feedback and suggestions are greatly appreciated, and we are open to further improvements.
+
+Thank you for your understanding!
