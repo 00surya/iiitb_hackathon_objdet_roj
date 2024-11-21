@@ -117,13 +117,17 @@ The vehicle tracking and behavior analysis are visualized in the following steps
 
 ## Fine-Tuning the YOLOv8 Model
 
-The system utilizes a **fine-tuned YOLOv8** model, trained on a custom dataset (XYZ dataset). Fine-tuning improves the model's accuracy for vehicle detection in the context of high-speed highway videos.
+The system utilizes a fine-tuned YOLOv8 model, trained on a custom dataset from Roboflow. The model has been fine-tuned to enhance its vehicle detection and localization capabilities, particularly in high-speed highway scenarios.
 
 ### Training Process:
 
-1. **Dataset**: The XYZ dataset (to be provided) contains labeled images of vehicles.
-2. **Fine-Tuning**: The YOLOv8 model is trained on this dataset to improve its performance in detecting vehicles in highway scenarios.
+1. **Dataset:** The Vehicles dataset from Roboflow (link: [Vehicles dataset](https://universe.roboflow.com/roboflow-100/vehicles-q0x2v)) contains:
+   - 2634 training images
+   - 966 validation images
+   - 458 test images
+     This dataset is labeled for vehicle detection, allowing the model to recognize various vehicle types under different conditions.
 
+2. **Fine-Tuning:** The YOLOv8 model has been fine-tuned on this dataset to improve its ability to localize vehicles. Fine-tuning adjusted the model’s weights, allowing it to accurately identify and draw bounding boxes around vehicles in dynamic, high-speed highway scenarios. This process ensures improved performance and efficiency in detecting vehicles in real-time applications.
 ---
 
 ## Script Workflow
