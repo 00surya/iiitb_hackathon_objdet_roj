@@ -9,5 +9,10 @@ Each project within this repository showcases a unique use case where object det
 ### 1. **Vehicle Tracking and Path Analysis** [Project Vehicle Tracking]
 A real-time vehicle tracking system that uses YOLOv8 for vehicle detection and Kalman filtering for trajectory prediction. The system tracks vehicles, analyzes their paths, and estimates their speed based on calibrated real-world points. Erratic driving behaviors are detected and logged for further analysis.
 
-### 2. **[Helmet Detection]**
+### 2. Helmet Detection
 A brief description of another project application, such as pedestrian detection, traffic analysis, etc.
+
+
+### Note on Documentation
+
+For each project, detailed documentation and instructions are provided in the respective README.md files within their individual project directories. These documents provide insights on how to set up, run, and customize the applications, along with any specific dependencies and configurations for each use case.****
