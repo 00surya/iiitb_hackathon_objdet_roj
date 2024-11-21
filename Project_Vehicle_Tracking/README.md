@@ -128,6 +128,14 @@ The system utilizes a fine-tuned YOLOv8 model, trained on a custom dataset from 
      This dataset is labeled for vehicle detection, allowing the model to recognize various vehicle types under different conditions.
 
 2. **Fine-Tuning:** The YOLOv8 model has been fine-tuned on this dataset to improve its ability to localize vehicles. Fine-tuning adjusted the model’s weights, allowing it to accurately identify and draw bounding boxes around vehicles in dynamic, high-speed highway scenarios. This process ensures improved performance and efficiency in detecting vehicles in real-time applications.
+
+### Model Evaluation
+
+**Metrics**
+
+![Metrics](sprites/training_results.png)
+
+
 ---
 
 ## Script Workflow
