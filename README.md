@@ -1,16 +1,16 @@
 # IITB Qualcomm Vision-x Hackathon - Object Detection Applications
 
-This repository contains multiple object detection applications developed for the **[Hackathon Name]** organized by **IITB**. The focus of these projects is to demonstrate the versatility of computer vision techniques in solving real-world problems using object detection models, specifically YOLOv8. 
+This repository contains multiple object detection applications developed for the **Qualcomm Vision-x** organized by **IITB**. The focus of these projects is to demonstrate the versatility of computer vision techniques in solving real-world problems using object detection models, specifically YOLOv8. 
 
 Each project within this repository showcases a unique use case where object detection plays a critical role in enabling automation, safety, and data analysis.
 
 ## Projects:
 
-### 1. **Vehicle Tracking and Path Analysis** [Project Vehicle Tracking]
+### 1. **Vehicle Tracking and Path Analysis** (Primary Project): [Project Vehicle Tracking](https://github.com/00surya/iitb_hackathon_objdet_roj/tree/master/Project_Vehicle_Tracking)
 A real-time vehicle tracking system that uses YOLOv8 for vehicle detection and Kalman filtering for trajectory prediction. The system tracks vehicles, analyzes their paths, and estimates their speed based on calibrated real-world points. Erratic driving behaviors are detected and logged for further analysis.
 
 ### 2. Helmet Detection
-A brief description of another project application, such as pedestrian detection, traffic analysis, etc.
+This idea focuses on developing a helmet detection system that uses image processing and machine learning to improve safety in high-risk environments. It ensures real-time monitoring and compliance with helmet-wearing protocols, reducing accidents and promoting safety.
 
 
 ### Note on Documentation
