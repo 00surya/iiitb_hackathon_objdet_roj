@@ -180,10 +180,16 @@ cd your-repository-folder
 The project provides a setup.sh script to set up the Conda environment and install all necessary dependencies. This script will also download the required YOLOv8 model.
 
 Run the following command to start the setup process:
-```.\setup.sh```
+
+```
+.\setup.sh
+```
 
 After the setup script completes, activate the Conda environment:
-```conda activate hackathon_env```
+
+```
+conda activate hackathon_env
+```
 
 ## Configuration
 
