@@ -12,7 +12,6 @@ A real-time vehicle tracking system that uses YOLOv8 for vehicle detection and K
 ### 2. Helmet Detection
 This idea focuses on developing a helmet detection system that uses image processing and machine learning to improve safety in high-risk environments. It ensures real-time monitoring and compliance with helmet-wearing protocols, reducing accidents and promoting safety.
 
+## Note:
 
-### Note on Documentation
-
-For each project, detailed documentation and instructions are provided in the respective README.md files within their individual project directories. These documents provide insights on how to set up, run, and customize the applications, along with any specific dependencies and configurations for each use case.****
+For each project, detailed documentation and instructions are provided in the respective README.md files within their individual project directories. These documents provide insights on how to set up, run, and customize the applications, along with any specific dependencies and configurations for each use case.
